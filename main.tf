@@ -2,8 +2,7 @@
 
 # Define the provider configuration for Docker
 provider "docker" {
-  # Specify the version of the Docker provider
-  version = "2.13.0"  # Example version number; update to the desired version
+  version = ">= 2.0.0"  # Specify the version constraint for the Docker provider
   
   # Docker connection details
   host = "tcp://localhost:2375"  # Specify the address of the Docker daemon
