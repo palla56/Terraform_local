@@ -13,7 +13,7 @@ terraform {
 # Define the provider configuration for Docker
 provider "docker" {
   # Docker connection details
-  host = "tcp://localhost:2375"  # Specify the address of the Docker daemon
+  host = "unix:///var/run/docker.sock"  # Specify the address of the Docker daemon
 }
 
 # Define a Docker container resource
