@@ -2,6 +2,9 @@
 
 # Define the provider configuration for Docker
 provider "docker" {
+  # Specify the source address for the Docker provider
+  source = "kreuzwerker/docker"
+  
   # Docker connection details
   host = "tcp://localhost:2375"  # Specify the address of the Docker daemon
 }
