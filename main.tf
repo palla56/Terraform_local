@@ -1,9 +1,17 @@
 # main.tf
 
+# Declare required providers
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = ">= 2.0.0"
+    }
+  }
+}
+
 # Define the provider configuration for Docker
 provider "docker" {
-  version = ">= 2.0.0"  # Specify the version constraint for the Docker provider
-  
   # Docker connection details
   host = "tcp://localhost:2375"  # Specify the address of the Docker daemon
 }
@@ -20,11 +28,4 @@ resource "docker_container" "example" {
   # Example:
   # ports {
   #   internal = 80
-  #   external = 8080
-  # }
-
-  # volumes {
-  #   container_path = "/app"
-  #   host_path      = "/data"
-  # }
-}
+  #  
