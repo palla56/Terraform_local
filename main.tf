@@ -22,7 +22,8 @@ resource "docker_container" "example" {
   name = "my-container"
 
   # Define the container configuration
-  image = "nginx:latest"  # Specify the Docker image to pull from the registry
+  image = "nginx:latest" 
+ } # Specify the Docker image to pull from the registry
 
   # Optionally, define additional container settings such as ports, volumes, environment variables, etc.
   # Example:
